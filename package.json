@@ -1,15 +1,15 @@
 {
   "author": "Duncan Beevers <duncan@dweebd.com> (http://www.dweebd.com)",
-  "name": "toposort",
+  "name": "Toposort",
   "description": "Naive Toplogical Sort",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/duncanbeevers/node-toposort.git"
+    "url": "git://github.com/duncanbeevers/node-Toposort.git"
   },
-  "main": "lib/toposort.js",
+  "main": "lib/Toposort.js",
   "scripts": {
-    "test": "node test/toposort.test.js"
+    "test": "node test/Toposort.test.js"
   },
   "engines": {
     "node": "*"
