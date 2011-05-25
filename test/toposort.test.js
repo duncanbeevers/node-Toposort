@@ -50,6 +50,14 @@ var tests = [
     assert.deepEqual(
       set.sort([ 'a', 'b', 'c', 'd', 'e', 'f' ], sortReverseAlphabetically),
      ['f', 'a', 'c', 'e', 'd', 'b' ]);
+  },
+
+  function tsetInterleavedPartialOrdering() {
+    var set = new toposort().
+      addPartialOrdering('a', 'c', 'e').
+      addPartialOrdering('f', 'c');
+    assert.deepEqual(set.sort([ 'a', 'b', 'c', 'd', 'e', 'f' ], sortAlphabetically),
+      [ 'a', 'b', 'f', 'c', 'd', 'e' ]);
   }
 ];
 
