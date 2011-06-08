@@ -58,6 +58,14 @@ var tests = [
       addPartialOrdering('f', 'c');
     assert.deepEqual(set.sort([ 'a', 'b', 'c', 'd', 'e', 'f' ], sortAlphabetically),
       [ 'a', 'b', 'f', 'c', 'd', 'e' ]);
+  },
+
+  function testAddDependencies() {
+    var set = new Toposort().
+      addDependencies('b', [ 'c', 'd' ]).
+      addDependencies('d', [ 'c' ]);
+    assert.deepEqual(set.sort([ 'a', 'b', 'c', 'd' ], sortAlphabetically),
+      [ 'a', 'c', 'd', 'b' ]);
   }
 ];
 
