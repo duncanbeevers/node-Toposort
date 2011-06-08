@@ -52,7 +52,7 @@ var tests = [
      ['f', 'a', 'c', 'e', 'd', 'b' ]);
   },
 
-  function tsetInterleavedPartialOrdering() {
+  function testInterleavedPartialOrdering() {
     var set = new Toposort().
       addPartialOrdering('a', 'c', 'e').
       addPartialOrdering('f', 'c');
