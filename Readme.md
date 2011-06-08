@@ -21,5 +21,7 @@ var set = new Toposort().
   addDependencies('brush teeth', [ 'open tube', 'apply paste' ]).
   addDependencies('wash face', [ 'open spigot', 'splash water' ]);
 set.sort([ 'wash face', 'brush teeth' ]);
+
+=> [ 'open tube', 'apply paste', 'brush teeth', 'open spigot', 'splash water', 'wash face' ]
 ```
 
